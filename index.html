@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Vídeo - Autenticação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Player de Vídeo Personalizado</h1>
+        <div id="authContainer">
+            <div id="loginForm">
+                <h2>Entrar</h2>
+                <input type="email" id="loginEmail" placeholder="E-mail" required>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <button onclick="login()">Entrar</button>
+                <p>Ainda não tem uma conta? <a href="#" onclick="showRegisterForm()">Registre-se</a></p>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Registrar</h2>
+                <input type="email" id="registerEmail" placeholder="E-mail" required>
+                <input type="password" id="registerPassword" placeholder="Senha" required>
+                <button onclick="register()">Registrar</button>
+                <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Entrar</a></p>
+            </div>
+        </div>
+        <div id="videoPlayerContainer" style="display: none;">
+            <h2>Upload de Vídeo</h2>
+            <input type="file" id="videoFile" accept="video/*" onchange="uploadVideo()">
+            <video id="videoPlayer" controls>
+                Selecione um vídeo para assistir.
+            </video>
+            <button id="playButton" style="display: none;" onclick="playVideo()">Reproduzir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
